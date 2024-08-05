@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NuGet\**" />
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="NuGet\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="NuGet\**" />
+    <None Remove="Properties\**" />
+    <None Remove="BidComposite\" />
+    <None Remove="BidService\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="HtmlAgilityPack" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="NPOI" />
+    <None Remove="Microsoft.Extensions.Logging" />
+    <None Remove="Microsoft.IdentityModel.Logging" />
+    <None Remove="Network" />
+    <None Remove="Microsoft.EntityFrameworkCore.Sqlite.Core" />
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="HawkKit\" />
+    <None Remove="CultureKit\" />
+    <None Remove="AnalyzeKit\" />
+    <None Remove="NationalKit\" />
+    <None Remove="itext7" />
+    <None Remove="SimCheck\" />
+    <None Remove="KidClass\" />
+    <None Remove="BBSwiftSetting.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="itext7" Version="8.0.2" />
+    <PackageReference Include="itext7.font-asian" Version="8.0.2" />
+    <PackageReference Include="F23.StringSimilarity" Version="6.0.0" />
+    <PackageReference Include="DiffPlex" Version="1.7.1" />
+    <PackageReference Include="FreeSpire.PDF" Version="8.6.0" />
+    <PackageReference Include="Pdfium.Core" Version="1.0.0.6" />
+    <PackageReference Include="Pdfium.Net.SDK" Version="4.87.2704" />
+    <PackageReference Include="CsvHelper" Version="32.0.3" />
+    <PackageReference Include="Microsoft.ClearScript.V8" Version="7.4.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharedKit\SharedKit.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HawkKit\" />
+    <Folder Include="AnalyzeKit\" />
+    <Folder Include="NationalKit\" />
+    <Folder Include="KidClass\" />
+    <Folder Include="BidComposite\" />
+    <Folder Include="BidService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BBSwiftSetting.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
